@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: pokemon_raw 
+    database: pokemon
+    schema: raw
+    tables:
+      - name: master_pokemon 
