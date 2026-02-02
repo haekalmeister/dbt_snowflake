@@ -3,17 +3,17 @@ WITH source as(
 )
 
 select
-    "#"::int as pokedex_number,
-    "Name" as name,
-    "Type 1" as primary_type,
-    "Type 2" as secondary_type,
-    "Total" as total_stats,
-    "HP" as hp,
-    "Attack" as attack,
-    "Defense" as defense,
-    "Sp. Atk" as special_attack,
-    "Sp. Def" as special_defense,
-    "Speed" as speed,
-    "Generation" as generation,
-    "Legendary" as is_legendary
+    POKEDEX as pokedex_number,
+    NAME as name,
+    TYPE_1 as primary_type,
+    TYPE_2 as secondary_type,
+    TOTAL as total_stats,
+    HP as hp,
+    ATTACK as attack,
+    DEFENSE as defense,
+    SP_ATK as special_attack,
+    SP_DEF as special_defense,
+    SPEED as speed,
+    GENERATION as generation,
+    LEGENDARY as is_legendary
 from source
