@@ -4,11 +4,11 @@
     {%- set default_schema = target.schema -%}
     
     {%- if custom_schema_name is none -%}
-        -- If no folder config, go to default (e.g. analytics)
+        -- If no folder config, go to default (e.g. marts)
         {{ default_schema }}
     
     {%- else -%}
-        -- If folder config exists, use it EXACTLY (e.g. finance)
+        -- If folder config exists, use it EXACTLY (e.g. marts)
         {{ custom_schema_name | trim }}
     
     {%- endif -%}
