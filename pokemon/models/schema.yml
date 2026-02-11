@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_pokemon
+    description: "Staged Pokemon stats from the raw master list."
+    columns:
+      - name: pokedex_number
+        description: "National Pokedex number."
+        tests:
+          - not_null
+          - unique
+      - name: name
+        description: "Pokemon name."
+        tests:
+          - not_null
+      - name: primary_type
+        description: "Primary type."
+        tests:
+          - not_null
+      - name: total_stats
+        description: "Sum of base stats."
+        tests:
+          - not_null
+      - name: generation
+        description: "Generation the Pokemon debuted in."
+        tests:
+          - not_null
+
+  - name: top_10_pokemon_stats
+    description: "Top 10 Pokemon by total base stats."
+    columns:
+      - name: pokedex_number
+        tests:
+          - not_null
+      - name: name
+        tests:
+          - not_null
+      - name: total_stats
+        tests:
+          - not_null
